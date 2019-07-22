@@ -1,0 +1,84 @@
+.jumbotron {
+
+    padding-top: 30%;
+    color: white;
+    z-index: 100;
+    background: url(https://image.redbull.com/rbcom/010/2016-04-25/1331790907528_2/0001/1/3000/1/welcome-to-the-eco-arena.jpg) no-repeat center center fixed; 
+    background-color: grey;
+    background-size: cover;
+    margin: 0
+
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content*/
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    background: #343a40;
+    color: #ffffff;
+}
+
+.signUpBtn{
+    margin-left: 1em;
+  }
+  
+  .loginField {
+    margin-bottom: 1em;
+  }
+  
+  #submitLoginBtn, #submitCreateBtn {
+    margin-right: 1em;
+  }
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 767.98px) { 
+    
+
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .head {
+        margin-top: 15%;
+        font-size: 30px;
+    }
+
+    .teamSearch {
+        margin-bottom: 5px;
+    }
+    .locSearch {
+        margin-bottom: 10px;
+    }
+
+    .card-img-top{
+        height: 100%;
+    }
+
+    .jumbotron{
+        background-color: gray;
+    }
+}
