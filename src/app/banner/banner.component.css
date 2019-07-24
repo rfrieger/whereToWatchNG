@@ -1,0 +1,11 @@
+.jumbotron {
+
+    padding-top: 30%;
+    color: white;
+    z-index: 100;
+    background: url(https://image.redbull.com/rbcom/010/2016-04-25/1331790907528_2/0001/1/3000/1/welcome-to-the-eco-arena.jpg) no-repeat center center fixed; 
+    background-color: grey;
+    background-size: cover;
+    margin: 0
+
+}
