@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ResultListComponent } from './result-list/result-list.component';
+import { HttpService } from './services/http-service';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,15 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
     NavbarComponent,
     FooterComponent,
     BannerComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    ResultListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
