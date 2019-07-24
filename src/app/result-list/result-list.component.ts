@@ -8,7 +8,7 @@ import { ResultListService } from '../services/result-list-service';
   styleUrls: ['./result-list.component.css']
 })
 export class ResultListComponent implements OnInit {
-  constructor(private httpService : HttpService, private reasultListService : ResultListService ) { }
+  constructor(public httpService : HttpService, public reasultListService : ResultListService ) { }
   locations: Location[];
 
   ngOnInit(){
