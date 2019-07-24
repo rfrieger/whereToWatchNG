@@ -9,6 +9,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResultListComponent } from './result-list/result-list.component';
 import { HttpService } from './services/http-service';
+import { ResultListService } from './services/result-list-service';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { HttpService } from './services/http-service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [HttpService],
+  providers: [HttpService, ResultListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

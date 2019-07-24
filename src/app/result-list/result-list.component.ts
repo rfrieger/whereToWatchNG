@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http-service';
+import { ResultListService } from '../services/result-list-service';
 
 @Component({
   selector: 'app-result-list',
@@ -7,18 +8,9 @@ import { HttpService } from '../services/http-service';
   styleUrls: ['./result-list.component.css']
 })
 export class ResultListComponent implements OnInit {
-  locations : Location[]
+  constructor(private httpService : HttpService, private reasultListService : ResultListService ) { }
+  locations: Location[];
 
-  constructor(private httpService : HttpService) { }
-
-  ngOnInit() {
-    this.findAllLocations();
+  ngOnInit(){
   }
-
-  findAllLocations() {
-    this.httpService.findAllLocations().subscribe(data => {
-      this.locations = data;
-    })
-  }
-
 }

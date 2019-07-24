@@ -1,22 +1,11 @@
-<div id="card_wrapper">
-    <div *ngFor="let location of locations" class="card">
-      <div class="card-header title">
-        {{location.name}}
-      </div>
-      
-      <div class="card-body">
-        <blockquote class="blockquote mb-0">
-          <p>test</p>
-          <div class="container">
-            <div class="row">
-              <div class="col align-self-end">
-                <footer class="blockquote-footer">test <cite title="Source Title">test</cite></footer>
-              </div>
-              <div class="col align-self-start">
-              </div>
-            </div>
-          </div>
-        </blockquote>
-      </div>
+<div class="list-group">
+  <a *ngFor="let location of reasultListService.returnLocations()"  class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{location.name}}</h5>
+      <small class="text-muted">{{location.city}}</small>
     </div>
-    </div>
+    <p class="mb-1">{{location.team}}</p>
+    <p class="mb-1">{{location.description}}</p>
+  </a>
+</div>
+  
