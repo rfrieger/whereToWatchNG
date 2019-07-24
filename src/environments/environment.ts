@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   apiurl: 'http://localhost:8080/api/'
-  // apiurl: 'https://wheretowatchsoccer.herokuapp.com/api/'
 };
 
 /*
