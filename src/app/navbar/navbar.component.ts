@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../services/modal-service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,18 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   loginBtnText: string = "Login"
-  showLoginModal = false;
-  constructor() { }
+  
+  constructor(public modalService : ModalService) { }
 
   ngOnInit() {
   }
-
-  toggleLoginModal() {
-    if(this.showLoginModal = false) {
-      this.showLoginModal = true
-    } else {
-      this.showLoginModal = false;
-    }
-  }
-
 }
