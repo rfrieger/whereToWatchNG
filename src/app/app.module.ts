@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResultListComponent } from './result-list/result-list.component';
 import { HttpService } from './services/http-service';
 import { ResultListService } from './services/result-list-service';
+import { ModalService } from './services/modal-service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ResultListService } from './services/result-list-service';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [HttpService, ResultListService],
+  providers: [HttpService, ResultListService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

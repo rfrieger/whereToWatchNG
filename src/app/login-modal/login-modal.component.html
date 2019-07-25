@@ -1,12 +1,12 @@
  
-  <div id="myModal" class="modal">
+  <div id="myModal" class="modal" *ngIf="modalService.returnShowLoginModal()">
     <div class="modal-content">
       <p>Please Enter Username and Password to Login</p>
       <label class="form-check-label" for="loginUserName">Username</label>
       <input id="loginUserName"class="form-control mr-sm-2 loginField" type="search"  placeholder="Username" >
       <label class="form-check-label" for="loginUserpassword">Password</label>
       <input id="loingUserpassword"class="form-control mr-sm-2 loginField" type="password" placeholder="Password" >
-      <button class="btn btn-outline-success my-2 my-sm-0" id="submitLoginBtn" type="submit">Submit</button>
-      <button class="btn btn-outline-danger my-2 my-sm-0" id="exitLoginBtn" type="submit">Exit</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" id="submitLoginBtn" type="button">Submit</button>
+      <button class="btn btn-outline-danger my-2 my-sm-0" id="exitLoginBtn" type="button" (click) = "modalService.toggleLoginModal()">Exit</button>
     </div>
   </div>
