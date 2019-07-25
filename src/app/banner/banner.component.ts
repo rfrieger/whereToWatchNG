@@ -7,7 +7,7 @@ import { ResultListService } from '../services/result-list-service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  constructor(private resultListService : ResultListService) { }
+  constructor(public resultListService : ResultListService) { }
   ngOnInit() {
   }
 
