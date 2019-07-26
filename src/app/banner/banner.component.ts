@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ResultListService } from '../services/result-list-service';
+import { HttpService } from '../services/http-service';
 
 @Component({
   selector: 'app-banner',
@@ -7,13 +8,11 @@ import { ResultListService } from '../services/result-list-service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  constructor(public resultListService : ResultListService) { }
+
+  constructor(public resultListService : ResultListService, public httpService : HttpService) {
+   }
+
   ngOnInit() {
   }
-
-  getResults(){
-    this.resultListService.findAllLocations();
-    
-    }
-
+  
 }

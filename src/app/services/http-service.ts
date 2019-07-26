@@ -11,6 +11,10 @@ export class HttpService {
     rootUrl = environment.apiurl
     
     public findAllLocations(): Observable<Location[]> {
-        return this.http.get<Location[]>(this.rootUrl + "locations")
+        return this.http.get<Location[]>(this.rootUrl + "/locations")
+    }
+
+    public getLocationsByCity(city:string) {
+        return this.http.get<Location[]>(this.rootUrl + "locations/" + city )
     }
 }

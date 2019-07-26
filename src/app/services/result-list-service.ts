@@ -5,17 +5,24 @@ import { Observable } from 'rxjs';
 Injectable()
 export class ResultListService {
     locations : Location[]
-    
+    // city : string = "phildelphia";
+    location : Location;
+
     constructor(private httpService : HttpService){
     };
 
-    findAllLocations() {
+    public findAllLocations() {
     this.httpService.findAllLocations().subscribe(data => {
       this.locations = data;
-      console.log(data);
-      console.log(this.locations.length);
     })
   }
+
+   public getLocationsByCity(city: string){
+     this.httpService.getLocationsByCity(city).subscribe(data => {
+       this.locations = data;
+       
+     })
+   }
 
     returnLocations() {
       return this.locations;
