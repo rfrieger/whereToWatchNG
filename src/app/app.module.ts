@@ -11,6 +11,7 @@ import { ResultListComponent } from './result-list/result-list.component';
 import { HttpService } from './services/http-service';
 import { ResultListService } from './services/result-list-service';
 import { ModalService } from './services/modal-service';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ModalService } from './services/modal-service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [HttpService, ResultListService, ModalService],
   bootstrap: [AppComponent]
