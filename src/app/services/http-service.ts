@@ -14,7 +14,14 @@ export class HttpService {
         return this.http.get<Location[]>(this.rootUrl + "/locations")
     }
 
-    public getLocationsByCity(city:string) {
-        return this.http.get<Location[]>(this.rootUrl + "locations/" + city )
+    public getLocations(city:string, team: string) {
+        if(!city) {
+            city = "n"
+        }
+
+        if(!team) {
+            team = "n"
+        }
+        return this.http.get<Location[]>(this.rootUrl + "/locations/" + city + "/" + team)
     }
 }
