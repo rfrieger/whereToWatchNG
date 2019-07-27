@@ -9,7 +9,7 @@ export class Location {
         this.location_id = null;
         this.name = "";
         this.description = "";
-        this.city = "";
-        this. team = "";
+        this.city = "n";
+        this. team = "n";
     }
 }
