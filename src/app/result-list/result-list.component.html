@@ -4,7 +4,10 @@
       <h5 class="mb-1">{{location.name}}</h5>
       <small class="text-muted">{{location.city}}</small>
     </div>
-    <p class="mb-1">{{location.team}}</p>
+    <div *ngFor = "let team of location.teams">
+      <p class="mb-1">{{team.name}}</p>
+    </div>
+    
     <p class="mb-1">{{location.description}}</p>
   </a>
 </div>

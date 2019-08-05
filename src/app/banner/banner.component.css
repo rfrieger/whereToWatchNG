@@ -7,3 +7,7 @@
     background-size: cover;
     margin: 0
 }
+
+.jumbo-container {
+    border-radius: 15px;
+}
