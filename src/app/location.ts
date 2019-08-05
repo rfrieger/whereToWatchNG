@@ -1,15 +1,16 @@
 export class Location {
-    private location_id : number;
-    private name : string
-    private description: string;
+    public location_id : number;
+    public name : string
+    public description: string;
     public city : string;
-    private team : string;
+    public address : string;
+
 
     constructor() {
         this.location_id = null;
         this.name = "";
         this.description = "";
-        this.city = "n";
-        this. team = "n";
+        this.city = "";
+        this.address="";
     }
 }
