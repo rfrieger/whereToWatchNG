@@ -14,7 +14,7 @@ export class ResultListService {
     
      this.httpService.getLocations(city, team).subscribe(data => {
        this.locations = data;
-       if(this.locations.length === 0) {
+       if(this.locations.length  < 1) {
          alert("No Matches Found")
          
        }

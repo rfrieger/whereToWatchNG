@@ -1,12 +1,12 @@
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <div class="jumboText jumbo-container radius-100 bg-dark">
-            <div class="mx-3 my-5 px-4">
+            <div class="mx-3 px-4">
               <h1 class="display-3 head">Fanbase</h1>
               <p class="lead">Helping you find the closest place to watch your favorite teams!</p>
               <form class="form-inline my-2 jumbo pb-2">
-                  <input class="form-control mr-sm-2 teamSearch" type="search" placeholder="Team" #team >
-                  <input class="form-control mr-sm-2 locSearch" type="search" placeholder="Location" #city>
+                  <input class="form-control mr-sm-2 teamSearch" type="search" placeholder="Team"    #team >
+                  <input class="form-control mr-sm-2 locSearch" type="search" placeholder="Location"    #city>
                   <a class="btn btn-info btn-lg" (click) ="resultListService.getLocations(city.value, team.value)"  target="button" role="button" >Search</a>
               </form>
             </div>

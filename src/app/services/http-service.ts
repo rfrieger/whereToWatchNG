@@ -23,7 +23,7 @@ export class HttpService {
             
         }
         if(!team) {
-            console.log(this.rootUrl + "/locations/" + city)
+            console.log(this.rootUrl + "locations/" + city)
             return this.http.get<Location[]>(this.rootUrl + "locations/" + city)
         } 
         
