@@ -27,6 +27,8 @@ export class HttpService {
             return this.http.get<Location[]>(this.rootUrl + "locations/" + city)
         } 
         
-        if (team && city)return this.http.get<Location[]>(this.rootUrl + "locations/" + city + "/" + team)
+        if (team && city){
+            return this.http.get<Location[]>(this.rootUrl + "locations/" + city + "/" + team)
+        }
     }
 }

@@ -12,6 +12,9 @@ import { HttpService } from './services/http-service';
 import { ResultListService } from './services/result-list-service';
 import { ModalService } from './services/modal-service';
 import { FormsModule }   from '@angular/forms';
+import { AuthService } from './services/auth-service';
+import { TokenService } from './services/token-service';
+import { SignupModalComponent } from './signup-modal/signup-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { FormsModule }   from '@angular/forms';
     FooterComponent,
     BannerComponent,
     LoginModalComponent,
-    ResultListComponent
+    ResultListComponent,
+    SignupModalComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,7 @@ import { FormsModule }   from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpService, ResultListService, ModalService],
+  providers: [HttpService, ResultListService, ModalService, AuthService, TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
