@@ -1,0 +1,11 @@
+<div id="myModal" class="modal" *ngIf="modalService.returnShowSignupModal()">
+    <div class="modal-content">
+      <h1>Signup</h1>
+      <label class="form-check-label" for="loginUserName">Username</label>
+      <input [(ngModel)] ="user.username" id="loginUserName"class="form-control mr-sm-2 loginField" type="search"  placeholder="Username"  >
+      <label class="form-check-label" for="loginUserpassword">Password</label>
+      <input [(ngModel)] ="user.password" id="loingUserpassword"class="form-control mr-sm-2 loginField" type="password" placeholder="Password"  >
+      <button class="btn btn-outline-success my-2 my-sm-0" id="submitLoginBtn" type="button" (click)="createNewUser()">Submit</button>
+      <button class="btn btn-outline-danger my-2 my-sm-0" id="exitLoginBtn" type="button" (click)="modalService.toggleSignupModal()">Exit</button>
+    </div>
+  </div>
