@@ -26,4 +26,8 @@
     .jumbotron{
         background-color: gray;
     }
+  
+    .body{
+        font-family: 'Montserrat', sans-serif;
+    }
 }
