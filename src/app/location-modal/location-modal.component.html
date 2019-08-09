@@ -1,0 +1,23 @@
+<div id="myModal" class="modal" *ngIf="modalService.returnLocationModal()">
+    <div class="modal-content">
+      <h1>Create New Location</h1>
+      <label class="form-check-label" for="locationName">Name</label>
+      <input [(ngModel)] ="location.name"id="locationName"class="form-control mr-sm-2 loginField" type="text" placeholder="Name" >
+
+      <label class="form-check-label" for="teamName">Team Name</label>
+      <input  id="teamName"class="form-control mr-sm-2 loginField" type="text" placeholder="Team Name" #team >
+
+      <label class="form-check-label" for="locationDesc">Description</label>
+      <input [(ngModel)] ="location.description" id="locationDesc"class="form-control mr-sm-2 loginField" type="text" placeholder="Description" >
+
+      <label class="form-check-label" for="locationCity">City</label>
+      <input [(ngModel)] ="location.city" id="locationCity"class="form-control mr-sm-2 loginField" type="text" placeholder="City" >
+
+      <label class="form-check-label" for="locationAddress">Address</label>
+      <input  [(ngModel)] ="location.address"id="locationAddress"class="form-control mr-sm-2 loginField" type="text" placeholder="Address" >
+
+      <button class="btn btn-outline-success my-2 my-sm-0" id="submitLoginBtn" type="button" (click) = createLocation(team.value) >Submit</button>
+      <button class="btn btn-outline-danger my-2 my-sm-0" id="exitLoginBtn" type="button" (click) = "modalService.toggleLocationModal()" >Exit</button>
+    </div>
+  </div>
+

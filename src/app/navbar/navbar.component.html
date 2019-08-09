@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand nav_title" href="#">Fanbase</a>
+    <a class="navbar-brand nav_title" href="#">FanBase</a>
+    <button *ngIf="tokenService.loggedIn" class="btn btn-outline-success my-2 my-sm-0" id="createLocation" type="button" (click)="modalService.toggleLocationModal()">New Location!</button >
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,7 +11,8 @@
 
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="loginBtn" type="button" (click)="modalService.toggleLoginModal()">{{loginBtnText}}</button >
-        <button class="btn btn-outline-success my-2 my-sm-0" id="signUpBtn" type="button" (click)="modalService.toggleSignupModal()">Sign up</button >
+        <button *ngIf="tokenService.loggedIn === false" class="btn btn-outline-success my-2 my-sm-0" id="loginBtn" type="button" (click)="modalService.toggleLoginModal()">Log in</button >
+          <button *ngIf="tokenService.loggedIn"class="btn btn-outline-success my-2 my-sm-0" id="loginBtn" type="button" (click)="logoff()">Log off</button >
+        <button  *ngIf="tokenService.loggedIn === false"class="btn btn-outline-success my-2 my-sm-0" id="signUpBtn" type="button" (click)="modalService.toggleSignupModal()">Sign up</button >
       </form>
     </div>

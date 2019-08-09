@@ -10,4 +10,10 @@
 
 .jumbo-container {
     border-radius: 15px;
+    padding-bottom: 2rem;
 }
+
+.head {
+    font-family: 'Montserrat', sans-serif;
+    }
+

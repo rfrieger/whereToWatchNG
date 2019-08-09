@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Team } from '../team';
+import { Location } from '../location';
 
 @Injectable()
 export class HttpService {
@@ -12,7 +13,6 @@ export class HttpService {
     constructor(private http: HttpClient) {
     }
    
-    
     public findAllLocations(): Observable<Location[]> {
         return this.http.get<Location[]>(this.rootUrl)
     }
@@ -30,5 +30,11 @@ export class HttpService {
         if (team && city){
             return this.http.get<Location[]>(this.rootUrl + "locations/" + city + "/" + team)
         }
+    }
+
+    public saveLocation(location: Location, team: string){
+        console.log(location.name)
+       return this.http.post<Location>(this.rootUrl + "location/bayern", location).subscribe();
+
     }
 }

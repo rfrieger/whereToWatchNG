@@ -15,6 +15,7 @@ import { FormsModule }   from '@angular/forms';
 import { AuthService } from './services/auth-service';
 import { TokenService } from './services/token-service';
 import { SignupModalComponent } from './signup-modal/signup-modal.component';
+import { LocationModalComponent } from './location-modal/location-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupModalComponent } from './signup-modal/signup-modal.component';
     BannerComponent,
     LoginModalComponent,
     ResultListComponent,
-    SignupModalComponent
+    SignupModalComponent,
+    LocationModalComponent
   ],
   imports: [
     BrowserModule,
