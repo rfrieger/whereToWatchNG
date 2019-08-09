@@ -23,6 +23,7 @@ export class LocationModalComponent implements OnInit {
   createLocation (team : string){
     this.httpService.saveLocation(this.location, team)
     this.modalService.toggleLocationModal()
+    alert("test")
   }
 
 }

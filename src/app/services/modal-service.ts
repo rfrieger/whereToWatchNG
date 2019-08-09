@@ -35,12 +35,9 @@ export class ModalService {
 
     public toggleLocationModal() {      
       if(this.showLocationModal === false) {
-        
           this.showLocationModal = true;
-          console.log("open", this.showLocationModal)
         } else {
           this.showLocationModal = false;
-          console.log("close", this.showLocationModal)
         }
       }     
 }
