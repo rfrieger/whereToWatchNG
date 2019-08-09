@@ -25,6 +25,8 @@ export class SignupModalComponent implements OnInit {
 
   createNewUser() {
     this.authService.signup(this.user).subscribe(token => this.tokenService.token = token);
-    console.log(this.tokenService.token);
+    this.modalService.toggleSignupModal()
+    alert("sign up successful")
+
   }
 }

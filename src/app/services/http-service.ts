@@ -33,7 +33,7 @@ export class HttpService {
     }
 
     public saveLocation(location: Location, team: string){
-       return this.http.post<Location>(this.rootUrl + "location/bayern", location).subscribe();
+       return this.http.post<Location>(this.rootUrl + "location/" + team, location).subscribe();
 
     }
 }

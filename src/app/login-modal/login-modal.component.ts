@@ -29,7 +29,9 @@ export class LoginModalComponent implements OnInit {
     this.authService.signin(this.username, this.password).subscribe(token => {
       this.tokenService.token = token
       this.tokenService.loggedIn =true
-      console.log(this.tokenService.loggedIn)
+      if(this.tokenService.token.length > 1) {
+        alert("Login Successful")
+      }
       this.modalService.toggleLoginModal()
     })
 
