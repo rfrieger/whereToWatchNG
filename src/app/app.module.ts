@@ -16,6 +16,10 @@ import { AuthService } from './services/auth-service';
 import { TokenService } from './services/token-service';
 import { SignupModalComponent } from './signup-modal/signup-modal.component';
 import { LocationModalComponent } from './location-modal/location-modal.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { LocationModalComponent } from './location-modal/location-modal.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule
+
   ],
   providers: [HttpService, ResultListService, ModalService, AuthService, TokenService],
   bootstrap: [AppComponent]
